@@ -9,7 +9,7 @@ Summary:	Python bindings for the Qt6WebEngine module
 Summary(pl.UTF-8):	Wiązania Pythona do modułu Qt6WebEngine
 Name:		python3-%{module}
 Version:	6.3.1
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/P/PyQt6-WebEngine/PyQt6_WebEngine-%{version}.tar.gz
@@ -37,7 +37,7 @@ Wiązania Pythona do modułu Qt6WebEngine.
 Summary:	SIP files needed to build bindings for Qt6WebEngine
 Summary(pl.UTF-8):	Pliki SIP potrzebne do budowania wiązań do Qt6WebEngine
 Group:		Development/Languages/Python
-Requires:	python3-PyQt6-sip >= 2:12.11.0
+Requires:	python3-PyQt6-sip >= 13.4.0
 Requires:	sip6 >= %{sip_ver}
 
 %description -n sip-PyQt6-WebEngine
