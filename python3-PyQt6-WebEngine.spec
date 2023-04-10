@@ -17,6 +17,7 @@ Source0:	https://pypi.python.org/packages/source/P/PyQt6-WebEngine/PyQt6_WebEngi
 URL:		http://www.riverbankcomputing.com/software/pyqtwebengine/
 BuildRequires:	Qt6WebEngine-devel >= %{qt_ver}
 BuildRequires:	pkgconfig
+BuildRequires:	python3
 BuildRequires:	python3-PyQt6
 BuildRequires:	qt6-build >= %{qt_ver}
 BuildRequires:	rpm-pythonprov
