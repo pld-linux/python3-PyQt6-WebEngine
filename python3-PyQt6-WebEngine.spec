@@ -28,6 +28,8 @@ Requires:	python3-libs
 Obsoletes:	python-PyQtWebEngine < 5.15.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_enable_debug_packages	0
+
 %description
 Python bindings for the Qt6WebEngine module.
 
