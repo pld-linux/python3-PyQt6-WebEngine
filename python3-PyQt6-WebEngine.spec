@@ -8,23 +8,23 @@
 Summary:	Python bindings for the Qt6WebEngine module
 Summary(pl.UTF-8):	Wiązania Pythona do modułu Qt6WebEngine
 Name:		python3-%{module}
-Version:	6.5.0
+Version:	6.6.0
 Release:	1
 License:	GPL v3
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/P/PyQt6-WebEngine/PyQt6_WebEngine-%{version}.tar.gz
-# Source0-md5:	d2331c2f4a7264474406e8c4c8fe7e46
+# Source0-md5:	7ebec290e288c40226a7f7f4aca26c16
 URL:		http://www.riverbankcomputing.com/software/pyqtwebengine/
 BuildRequires:	Qt6WebEngine-devel >= %{qt_ver}
 BuildRequires:	pkgconfig
-BuildRequires:	python3
+BuildRequires:	python3 >= 1:3.7
 BuildRequires:	python3-PyQt6
 BuildRequires:	qt6-build >= %{qt_ver}
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sip-PyQt6 >= 5.15.7
 BuildRequires:	sip6 >= %{sip_ver}
-Requires:	python3-libs
+Requires:	python3-libs >= 1:3.7
 Obsoletes:	python-PyQtWebEngine < 5.15.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
