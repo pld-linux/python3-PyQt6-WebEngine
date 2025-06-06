@@ -10,7 +10,7 @@ Summary:	Python bindings for the Qt6WebEngine module
 Summary(pl.UTF-8):	Wiązania Pythona do modułu Qt6WebEngine
 Name:		python3-%{module}
 Version:	6.9.0
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/pyqt6-webengine/
@@ -40,17 +40,18 @@ Python bindings for the Qt6WebEngine module.
 %description -l pl.UTF-8
 Wiązania Pythona do modułu Qt6WebEngine.
 
-%package -n sip-PyQt6-WebEngine
+%package devel
 Summary:	SIP files needed to build bindings for Qt6WebEngine
 Summary(pl.UTF-8):	Pliki SIP potrzebne do budowania wiązań do Qt6WebEngine
 Group:		Development/Languages/Python
 Requires:	python3-PyQt6-devel >= 6.2.0
 Requires:	sip6 >= %{sip_ver}
+Obsoletes:	sip-PyQt6-WebEngine < 6.9.0-2
 
-%description -n sip-PyQt6-WebEngine
+%description devel
 SIP files needed to build bindings for Qt6WebEngine.
 
-%description -n sip-PyQt6-WebEngine -l pl.UTF-8
+%description devel -l pl.UTF-8
 Pliki SIP potrzebne do budowania wiązań do Qt6WebEngine.
 
 %prep
@@ -83,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py3_sitedir}/PyQt6/QtWebEngineWidgets.pyi
 %{py3_sitedir}/PyQt6_WebEngine-%{version}.dist-info
 
-%files -n sip-PyQt6-WebEngine
+%files devel
 %defattr(644,root,root,755)
 %{py3_sitedir}/PyQt6/bindings/QtWebEngineCore
 %{py3_sitedir}/PyQt6/bindings/QtWebEngineQuick
