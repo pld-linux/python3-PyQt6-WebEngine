@@ -1,8 +1,9 @@
 
 %define		module	PyQt6-WebEngine
 # minimal required sip version
-%define		sip_ver	6.4
-# last qt version covered by these bindings (minimal required is currently 5.0.0)
+%define		sip_ver	6.9
+# last qt version covered by these bindings (minimal required is currently 6.0.0)
+# see sip/QtWebEngineCore/QtWebEngineCoremod.sip /%Timeline
 %define		qt_ver	%{version}
 
 Summary:	Python bindings for the Qt6WebEngine module
@@ -12,20 +13,23 @@ Version:	6.9.0
 Release:	1
 License:	GPL v3
 Group:		Libraries/Python
-Source0:	https://pypi.python.org/packages/source/p/pyqt6-webengine/pyqt6_webengine-%{version}.tar.gz
+#Source0Download: https://pypi.org/simple/pyqt6-webengine/
+Source0:	https://files.pythonhosted.org/packages/source/p/pyqt6-webengine/pyqt6_webengine-%{version}.tar.gz
 # Source0-md5:	01baa50f50337ada6d2bbf542c12caf2
-URL:		http://www.riverbankcomputing.com/software/pyqtwebengine/
+URL:		https://www.riverbankcomputing.com/software/pyqtwebengine/
 BuildRequires:	Qt6WebEngine-devel >= %{qt_ver}
 BuildRequires:	pkgconfig
-BuildRequires:	python3 >= 1:3.7
-BuildRequires:	python3-PyQt6
+BuildRequires:	python3-PyQt-builder >= 1.17
+BuildRequires:	python3-PyQt-builder < 2
+BuildRequires:	python3-PyQt6 >= 6.2.0
+BuildRequires:	python3-PyQt6-devel >= 6.2.0
+BuildRequires:	python3-devel >= 1:3.9
 BuildRequires:	qt6-build >= %{qt_ver}
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
-BuildRequires:	sip-PyQt6 >= 5.15.7
 BuildRequires:	sip6 >= %{sip_ver}
-Requires:	python3-libs >= 1:3.7
-Obsoletes:	python-PyQtWebEngine < 5.15.6
+Requires:	Qt6WebEngine >= %{qt_ver}
+Requires:	python3-libs >= 1:3.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_enable_debug_packages	0
@@ -40,7 +44,7 @@ Wiązania Pythona do modułu Qt6WebEngine.
 Summary:	SIP files needed to build bindings for Qt6WebEngine
 Summary(pl.UTF-8):	Pliki SIP potrzebne do budowania wiązań do Qt6WebEngine
 Group:		Development/Languages/Python
-Requires:	python3-PyQt6-sip >= 13.4.0
+Requires:	python3-PyQt6-devel >= 6.2.0
 Requires:	sip6 >= %{sip_ver}
 
 %description -n sip-PyQt6-WebEngine
