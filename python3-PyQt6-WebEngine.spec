@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py3_sitedir}/PyQt6/QtWebEngineCore.pyi
 %{py3_sitedir}/PyQt6/QtWebEngineQuick.pyi
 %{py3_sitedir}/PyQt6/QtWebEngineWidgets.pyi
-%{py3_sitedir}/PyQt6_WebEngine-%{version}.dist-info
+%{py3_sitedir}/pyqt6_webengine-%{version}.dist-info
 
 %files devel
 %defattr(644,root,root,755)
