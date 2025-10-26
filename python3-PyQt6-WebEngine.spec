@@ -30,6 +30,7 @@ BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sip6 >= %{sip_ver}
 Requires:	Qt6WebEngine >= %{qt_ver}
 Requires:	python3-libs >= 1:3.9
+ExclusiveArch:	%{x8664} aarch64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_enable_debug_packages	0
