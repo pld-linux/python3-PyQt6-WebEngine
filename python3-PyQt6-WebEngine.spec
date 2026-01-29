@@ -28,7 +28,7 @@ BuildRequires:	qt6-build >= %{qt_ver}
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sip6 >= %{sip_ver}
-Requires:	Qt6WebEngine >= %{qt_ver}
+%requires_eq_to	Qt6WebEngine Qt6WebEngine-devel
 Requires:	python3-libs >= 1:3.9
 ExclusiveArch:	%{x8664} aarch64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
