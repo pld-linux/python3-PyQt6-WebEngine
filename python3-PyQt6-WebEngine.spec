@@ -10,7 +10,7 @@ Summary:	Python bindings for the Qt6WebEngine module
 Summary(pl.UTF-8):	Wiązania Pythona do modułu Qt6WebEngine
 Name:		python3-%{module}
 Version:	6.10.0
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/pyqt6-webengine/
